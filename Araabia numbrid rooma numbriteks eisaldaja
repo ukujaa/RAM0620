@@ -1,0 +1,80 @@
+
+# Teisaldus määrused
+def konvertor(araabia_number, roomanumber):
+
+    if araabia_number >= 1000:
+        roomanumber += "M"
+        araabia_number -= 1000
+    elif 1000 > araabia_number >= 900:
+        roomanumber += "CM"
+        araabia_number -= 900
+
+    if 900 > araabia_number >= 500:
+        roomanumber += "D"
+        araabia_number -= 500
+    elif 500 > araabia_number >= 400:
+        roomanumber += "CD"
+        araabia_number -= 400
+    
+    if 400 > araabia_number >= 100:
+        roomanumber += "C"
+        araabia_number -= 100
+    elif 100 > araabia_number >= 90:
+        roomanumber += "XC"
+        araabia_number -= 90
+
+    if 90 > araabia_number >= 50:
+        roomanumber += "L"
+        araabia_number -= 50
+    elif 50 > araabia_number >= 40:
+        roomanumber += "XL"
+        araabia_number -= 40
+
+    if 40 > araabia_number >= 10:
+        roomanumber += "X"
+        araabia_number -= 10
+    elif 10 > araabia_number >= 9:
+        roomanumber += "IX"
+        araabia_number -= 9
+
+    if 9 > araabia_number >= 5:
+        roomanumber += "V"
+        araabia_number -= 5
+    elif 5 > araabia_number >= 4:
+        roomanumber += "IV"
+        araabia_number -= 4
+
+    if 4 > araabia_number >= 1:
+        roomanumber += "I"
+        araabia_number -= 1
+
+    return roomanumber, araabia_number
+
+def main():
+    try:
+
+        # Küsime kasutajalt numbrit mida teisaldada
+        araabia_number = int(input("Sisesta roomanumbriks konverteeritav number 1-1000: "))
+        roomanumber = ""
+
+        """
+        I - 1
+        V - 5
+        X - 10
+        L - 50
+        C - 100
+        D - 500
+        M - 1000
+        """
+        
+        #Kuni tagastus väärtus on null
+        while araabia_number != 0:
+            roomanumber, araabia_number = konvertor(araabia_number, roomanumber)
+
+        print(roomanumber)
+
+    except Exception as e:
+        print(e)
+
+if __name__ == "__main__":
+    main()
