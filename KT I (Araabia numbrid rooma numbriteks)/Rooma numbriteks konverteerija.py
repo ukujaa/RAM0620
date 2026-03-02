@@ -2,7 +2,7 @@
 # Teisaldus määrused
 def konvertor(araabia_number, roomanumber):
 
-    if araabia_number >= 1000:
+    if araabia_number == 1000:
         roomanumber += "M"
         araabia_number -= 1000
     elif 1000 > araabia_number >= 900:
