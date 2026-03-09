@@ -173,6 +173,6 @@ if __name__ == "__main__":
     #lahing(maag, vibukütt)
 
 # Uue tegelase lisamisegks tuleb luua uus alamklass nt Slamõrtsukas(Tegelane):
-#
+# Seejärel implementeerida kõik vastavad meetodid
 #
 #
